@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class SanPham {
+    public String tenSp;
+    public double donGia, giamGia;
+
+    Scanner sc = new Scanner(System.in);
+    
+    public SanPham() {
+    }
+
+    public SanPham(String tenSp, double donGia, double giamGia) {
+        this.tenSp = tenSp;
+        this.donGia = donGia;
+        this.giamGia = giamGia;
+    }
+    
+    public double getThueNhapKhau(){
+        return  donGia * 0.1;
+    }
+
+    public void nhap(){
+        System.out.print("Nhap vao ten sp: ");
+        tenSp = sc.nextLine();
+        
+        System.out.print("Nhap vao don gia: ");
+        donGia = sc.nextDouble();
+        
+        System.out.print("Nhap vao giam gia: ");
+        giamGia = sc.nextDouble();
+    }
+    public void xuat(){
+        System.out.print("Ten san pham la: "+ tenSp+"\n");
+        System.out.print("don gia la: "+donGia+"\n");
+        System.out.print("giam gia la: "+giamGia+"\n");
+        System.out.print("thue nhap khau la: "+getThueNhapKhau());
+    }
+}
+
+
+public class Main1 {
+    public static void main(String[] args) {
+        SanPham sp = new SanPham();
+        SanPham sp1 = new SanPham();
+        
+        sp.nhap();
+        System.out.println("-------------------");
+        sp1.nhap();
+        System.out.println("-------------------");
+        sp.xuat();
+        System.out.println("\n-------------------");
+        sp1.xuat();
+    }
+}
