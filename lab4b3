@@ -1,0 +1,34 @@
+public class SanPham {
+    public String tenSp;
+    public double donGia, giamGia;
+
+    public SanPham() {
+    }
+
+    public SanPham(String tenSp, double donGia, double giamGia) {
+        this.tenSp = tenSp;
+        this.donGia = donGia;
+        this.giamGia = giamGia;
+    }
+
+    public SanPham(String tenSp, double donGia) {
+        this.tenSp = tenSp;
+        this.donGia = donGia;
+        this.giamGia=0;
+    }
+    
+    public double getThueNhapKhau(){
+        return  donGia * 0.1;
+    }
+}
+
+
+public class Main1 {
+    public static void main(String[] args) {
+        SanPham sp = new SanPham("Hoa hong", 20000, 2000);
+        SanPham sp1 = new SanPham("Hoa anh dao", 20200);
+        sp.xuat();
+        System.out.println("\n-------------------");
+        sp1.xuat();
+    }
+}
