@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner (System.in);
+        System.out.print("Nhap ho va ten");
+        String hoTen = s.nextLine():
+        hoTen.trim();
+        
+        String ho = hoTen.substring(0, hoTen.indexOf(""));  
+        String tenDem = hoTen.substring(hoTen.indexOf(""), hoTen.lastIndexOf(""));
+        String ten = hoTen.substring(hoTen.lastIndexOf(""));
+        
+        System.out.printf("%S %S %S", ho.toUpperCase(), tenDem, ten.toUpperCase());
+    }
+}
